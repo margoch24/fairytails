@@ -149,7 +149,7 @@ module.exports = {
     ***************************************************************************/
     cors: {
       allowOrigins: [
-        'https://earth-homeland.pp.ua/',
+        'https://earth-homeland.pp.ua',
       ]
     },
 
