@@ -1,4 +1,4 @@
-function readMore(text) {
+function readMore(text, en) {
     var currentText = document.getElementById('read_more_text' + text);
     var btnText = document.querySelector('.btn_more_text' + text);
     var arrow = document.getElementById('arrow' + text);
@@ -18,9 +18,11 @@ window.onscroll = function() {
     var header = document.getElementById("header");
 
     if (window.pageYOffset > 1) {
-    header.classList.add("scroll-head");
+        header.classList.add("scroll-head");
+        document.querySelector(".nav-item-en div a").classList.add('black');
     } else {
-    header.classList.remove("scroll-head");
+        header.classList.remove("scroll-head");
+        document.querySelector(".nav-item-en div a").classList.remove('black');
     }
 };
 
