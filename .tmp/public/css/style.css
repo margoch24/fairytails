@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    height: 100%;
+}
+
+body.modal-open {
+    padding-right: 0px !important;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 1.0833333333;
+}
+
+h2 {
+    font-size: 52px;
+    line-height: 1.4444444444;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 1.0833333333;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 1.2380952381;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #FFF;
+    font-family: PlayfairDisplay;;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-family: Comfortaa;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style: none;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Header Start */
+.nav-fixed {
+    position: fixed;
+    width: 100%;
+}
+.scroll-head {
+    background: #94b3ae;
+    z-index: 10;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+}
+.nav-item {
+    padding: 1rem 0 1rem;
+    cursor: pointer;
+}
+.white-li  {
+    border-bottom: 1px solid #fff;
+}
+.white {
+    color: #FFF;
+}
+.nav-link {
+    color: #2c1919;
+    line-height: 8px;
+    font-family: Comfortaa;
+    transition: all linear .3s;
+    text-decoration: none;
+    padding: 0 10px;
+    height: 25px;
+    display: flex;
+    cursor: pointer;
+}
+.nav-link-item {
+    margin: 0;
+    align-self: center;
+}
+/* Header End */
+
+/* Body Start */
+.body_bg {
+    background: url(../images/home_images/home_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 120%;
+}
+.inner {
+    display: flex;
+    padding-top: 60px;
+    height: 100%;
+}
+.inner-text {
+   display: flex;
+    justify-content: space-between;
+}
+.text-body {
+    letter-spacing: 5px;
+}
+.additional-text {
+    margin: 0;
+    text-align: right;
+    position: relative;
+}
+.additional-text::before, .letter-subtitle::before {
+    content: "";
+    width: 100px;
+    height: 1.5px;
+    background: #000;
+    left: 0;
+    top: 50%;
+    transform: translate(50px 0px);
+    position: absolute;
+}
+.container.cont-inner {
+    align-self: center;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.social-table {
+    border-spacing: 8px; 
+    border-right: 1px solid #fff;
+}
+.social_img {
+    transition: all 0.2s ease-in;
+}
+.social_img:hover {
+    transform: translateY(-2px);
+}
+
+.home_btn {
+    margin-top: 2rem;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background: #000;
+    transition: all 0.2s ease-in;
+}
+.home_btn:hover {
+    background: #01466f;
+}
+.btn_href {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    height: 50px;
+}
+/* Body End */
+
+/* Letters Start */
+.letters_bg {
+    background: #060201;
+}
+.letter {
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+.letter_story {
+    align-self: center;
+}
+.letter-subtitle, .letter-subtitle2 {
+    color: #fefca6;
+    font-size: 15px;
+    font-family: Comfortaa;
+    position: relative;
+}
+.letter-subtitle {
+    padding-left: 70px;
+}
+.letter-subtitle::before {
+    background: #fefca6;
+    width: 50px;
+    height: 1px;
+}
+.letter-title {
+    font-family: PlayfairDisplay;
+    font-size: 30px;
+}
+.letter-text {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 2.5rem;
+}
+.letter_arrow {
+    height: 20px;
+    align-self: center;
+    padding-left: 10px;
+}
+.read_group {
+    display: flex; 
+    cursor: pointer;
+    transition: all linear .3s;
+    width: 200px;
+}
+.read_group:hover {
+    transform: translateY(-2px);
+}
+.read-more-text {
+    display: none;
+}
+.read-more-text--show {
+    display: inline;
+}
+/* Letters End */
+
+/* Footer Start */
+.footer_bg {
+    background: rgb(61,108,115);
+    background: linear-gradient(90deg, rgba(61,108,115,1) 0%, rgba(61,108,115,1) 35%, rgba(229,234,241,1) 100%);
+    height: 230px;
+}
+.footer_inner {
+    display: flex;
+}
+.footer_column {
+    padding-top: 2rem;
+    flex: 1 1 0;
+    display: flex;
+}
+.fotter_title{
+    font-family: Comfortaa;
+    color: #000;
+}
+.fotter_title.about {
+    padding-left: 30px;
+}
+.footer_icon {
+    filter: brightness(0.5);
+    position: absolute;
+    left: -15px;
+    top: -17px;
+}
+.footer_text {
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+    font-size: 15px;
+}
+.footer_text a {
+    text-decoration: underline;
+    color: #01466f;
+}
+/* Footer End */
