@@ -6,6 +6,8 @@
 # Node artifact files
 node_modules/
 dist/
+README.md
+Armygrid-Setup-0.0.1.exe
 
 # Compiled Java class files
 *.class
@@ -48,3 +50,5 @@ Thumbs.db
 *.mov
 *.wmv
 
+views/scripts.ejs
+views/styles.ejs
