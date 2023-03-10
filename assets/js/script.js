@@ -4,11 +4,13 @@ function readMore(text, en) {
     var arrow = document.getElementById('arrow' + text);
     if(currentText.className.includes('read-more-text')) {
         currentText.classList.remove('read-more-text');
-        btnText.textContent = 'згорнути';
+        if(en) btnText.textContent = 'read less';
+        else btnText.textContent = 'згорнути';
         arrow.classList.add('read-more-text')
     } else {
         currentText.classList.add('read-more-text');
-        btnText.textContent = 'читати далі';
+        if(en) btnText.textContent = 'read more';
+        else btnText.textContent = 'читати далі';
         arrow.classList.remove('read-more-text')
     } 
 }
@@ -45,3 +47,9 @@ function removeHover(nameLink) {
     document.querySelector('#' + nameLink + '-item').classList.remove('white-li');
 }
 
+
+var uri = window.location.toString();
+if (uri.indexOf("?") > 0) {
+  var clean_uri = uri.substring(0, uri.indexOf("?"));
+  window.history.replaceState({}, document.title, clean_uri);
+}

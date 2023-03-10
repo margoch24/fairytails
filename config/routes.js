@@ -10,6 +10,4 @@
 
 module.exports.routes = {
   'GET /': 'HomeController.index', 
-  'GET /en': 'HomeController.en', 
-  'GET /download': 'HomeController.download', 
 };

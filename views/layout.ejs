@@ -10,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Рідний край</title>
+  <title><%= i18n('Motherland')%></title>
 
   <link rel="stylesheet" href="./css/style.css">
 
@@ -25,16 +25,20 @@
             <div class="container">
               <ul class="nav">
                   <li onmouseover="addHover('home')" onmouseout="removeHover('home')" id="home-item" class="nav-item">
-                      <div id="home" class="nav-link"><p class="nav-link-item">Головна</p></div>
+                      <div id="home" class="nav-link"><p class="nav-link-item"><%= i18n('Home')%></p></div>
                   </li>
                   <li onmouseover="addHover('letters')" onmouseout="removeHover('letters')" id="letters-item" class="nav-item">
-                      <div id="letters" class="nav-link"><p class="nav-link-item">Листи</p></div>
+                      <div id="letters" class="nav-link"><p class="nav-link-item"><%= i18n('Letters')%></p></div>
                   </li>
                   <li onmouseover="addHover('contacts')" onmouseout="removeHover('contacts')" id="contacts-item" class="nav-item">
-                      <div id="contacts" class="nav-link"><p class="nav-link-item">Контакти</p></div>
+                      <div id="contacts" class="nav-link"><p class="nav-link-item"><%= i18n('Contacts')%></p></div>
                   </li>
                   <li class="nav-item nav-item-en">
-                      <div class="nav-link"><a href="/en" class="nav-link-item">en</a></div>
+                    <% if (locale === 'ua') { %>
+                      <div class="nav-link"><a href="/?locale=en" class="nav-link-item">en</a></div>
+                    <% } else if (locale === 'en') { %>
+                      <div class="nav-link"><a href="/?locale=ua" class="nav-link-item">ua</a></div>
+                    <% } %>
                   </li>
               </ul>
             </div>
@@ -45,9 +49,9 @@
           <div class="container cont-inner">
               <div class="inner-text">
                   <div>
-                      <p class="additional-text">листи з усіх куточків країни</p>
-                      <h2 class="text-body">Мій Рідний Край</h2>
-                      <h2 class="text-body">Моя Земля</h2>
+                      <p class="additional-text text-en"><%= i18n('letters from all over the country')%></p>
+                      <h2 class="text-body"><%= i18n('My Homeland')%></h2>
+                      <h2 class="text-body"><%= i18n('My Earth')%></h2>
                   </div>
                   <div style="display: flex;">
                       <table class="social-table">
@@ -75,12 +79,12 @@
                   </div>
               </div>
               <div class="home_btn">
-                  <a class="btn_href" href="/download"><p style="margin: 0; align-self: center;">напиши нам</p></a>
+                  <a class="btn_href" href=""><p style="margin: 0; align-self: center;"><%= i18n('write to us')%></p></a>
               </div>
           </div>
       </div>
   </div>
-
+  
   <%- body %>
 
   <footer>
@@ -90,25 +94,25 @@
                   <div class="footer_column" style="justify-content: center;">
                       <div style="width: 300px;">
                           <div style="position: relative;">
-                              <h5 class="fotter_title about">Батьківщина</h5>
+                              <h5 class="fotter_title about"><%= i18n('Motherland')%></h5>
                               <img class="footer_icon" src="../images/home_images/pngwing.com.png" alt="">
                           </div>
-                          <p class="footer_text">Місце, де читають твої думки, здійснюються твої бажання.</p>
+                          <p class="footer_text"><%= i18n('A place where your thoughts are read and your wishes come true.')%></p>
                       </div>
                   </div>
                   <div class="footer_column" style="justify-content: center;">
                       <div style="width: 250px;">
-                          <h5 class="fotter_title">Контактна інформація</h5>
-                          <p class="footer_text">пошта: <a href="mailto:batkivschina@gmail.com">batkivschina@gmail.com</a></p>
-                          <p class="footer_text">телефон: +380950412547</p>
+                          <h5 class="fotter_title"><%= i18n('Contact Information')%></h5>
+                          <p class="footer_text"><%= i18n('mail')%>: <a href="mailto:motherland@gmail.com">motherland@gmail.com</a></p>
+                          <p class="footer_text"><%= i18n('phone')%>: +380950412547</p>
                       </div>
                   </div>
                   <div class="footer_column" style="justify-content: right;">
                       <div style="width: 250px;">
-                          <h5 class="fotter_title"> Реєстрація</h5>
-                          <p class="footer_text">Реєструйся, щоб завжди бути проінформованим</p>
+                          <h5 class="fotter_title"><%= i18n('Registration')%> </h5>
+                          <p class="footer_text"><%= i18n('Register to always be informed')%></p>
                           <div class="home_btn">
-                              <a class="btn_href" href=""><p style="margin: 0; align-self: center;">реєстрація</p></a>
+                              <a class="btn_href" href=""><p style="margin: 0; align-self: center;"><%= i18n('registration')%></p></a>
                           </div>
                       </div>
                   </div>
@@ -117,8 +121,8 @@
       </div>
   </footer>
 
-  <script src="./js/script.js"></script>
-  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <script src="./js/script_en.js"></script>
+  <link rel="shortcut icon" href="../images/home_images/pngwing.com.png" type="image/x-icon">
 </body>
 
 </html>
