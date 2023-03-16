@@ -84,12 +84,15 @@ ul li {
 }
 
 /* Header Start */
+#header {
+    z-index: 10;
+}
 .nav-fixed {
     position: fixed;
     width: 100%;
 }
 .scroll-head {
-    background: #94b3ae;
+    background: #bcb9aa;
     z-index: 10;
 }
 .nav {
@@ -142,26 +145,34 @@ ul li {
     position: relative;
     height: 120%;
 }
+.body_bg.authors {
+    height: unset;
+}
+.books {
+    height: 100%;
+    background-color: #4c491a;
+}
 .inner {
     display: flex;
-    padding-top: 60px;
     height: 100%;
 }
 .inner-text {
    display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .text-body {
     letter-spacing: 5px;
+    font-size: 50px;
+    text-align: center;
 }
 .additional-text {
     margin: 0;
-    text-align: right;
+    text-align: center;
     position: relative;
 }
-.additional-text::before, .letter-subtitle::before {
+.additional-text::before, .additional-text::after, .letter-subtitle::before {
     content: "";
-    width: 100px;
+    width: 70px;
     height: 1.5px;
     background: #000;
     left: 0;
@@ -169,11 +180,13 @@ ul li {
     transform: translate(50px 0px);
     position: absolute;
 }
-.additional-text.text-en::before {
-    width: 70px;
+.additional-text::after {
+    left: unset;
+    right: 0;
 }
 .container.cont-inner {
     align-self: center;
+    margin-top: -10rem;
 }
 .container {
     max-width: 1200px;
@@ -196,7 +209,6 @@ ul li {
 }
 
 .home_btn {
-    margin-top: 2rem;
     height: 50px;
     width: 150px;
     display: flex;
@@ -204,9 +216,14 @@ ul li {
     color: #fff;
     background: #000;
     transition: all 0.2s ease-in;
+    margin: 2rem auto auto;
+}
+.home_btn.foot {
+    background: #fff;
+    color: #000;
 }
 .home_btn:hover {
-    background: #01466f;
+    background: #58581b;
 }
 .btn_href {
     text-decoration: none;
@@ -218,7 +235,10 @@ ul li {
 
 /* Letters Start */
 .letters_bg {
-    background: #060201;
+    background: #9e9a5b;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .letter {
     padding: 2rem 5rem;
@@ -276,8 +296,8 @@ ul li {
 
 /* Footer Start */
 .footer_bg {
-    background: rgb(61,108,115);
-    background: linear-gradient(90deg, rgba(61,108,115,1) 0%, rgba(61,108,115,1) 35%, rgba(229,234,241,1) 100%);
+    background: rgb(0,0,0);
+    /* background: linear-gradient(90deg, rgba(61,108,115,1) 0%, rgba(61,108,115,1) 35%, rgba(229,234,241,1) 100%); */
     height: 230px;
 }
 .footer_inner {
@@ -290,7 +310,7 @@ ul li {
 }
 .fotter_title{
     font-family: Comfortaa;
-    color: #000;
+    color: #fff;
 }
 .fotter_title.about {
     padding-left: 30px;
@@ -303,7 +323,7 @@ ul li {
 }
 .footer_text {
     font-family: 'Courier New', Courier, monospace;
-    color: #000;
+    color: #fff;
     font-size: 15px;
 }
 .footer_text a, .footer_text a:hover {
@@ -312,3 +332,21 @@ ul li {
     border-bottom: none !important;
 }
 /* Footer End */
+
+.list_of_authors {
+    margin: 5rem;
+}
+.one_of_authors {
+    font-size: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.author_info {
+    align-items: center;
+    display: flex;
+    margin-top: 5rem;
+}
+.p_athor_info {
+    width: 400px;
+    margin-right: 3rem;
+}

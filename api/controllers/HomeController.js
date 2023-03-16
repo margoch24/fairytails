@@ -1,6 +1,8 @@
 module.exports = {
   index: async function (req, res) {
-    req.setLocale(req.query.locale);
-    res.view('home/index', { locale: req.getLocale() });
+    res.view('home/index', { auth: false, books: false });
+  },
+  authors: async function (req, res) {
+    res.view('home/authors', { auth: true, books: false });
   }
 }

@@ -10,4 +10,5 @@
 
 module.exports.routes = {
   'GET /': 'HomeController.index', 
+  'GET /authors': 'HomeController.authors', 
 };
