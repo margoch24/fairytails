@@ -59,7 +59,7 @@ function changeAuthor(id) {
         { id: 4, img: "symonenko.jpg", text: "Поет з'явився на світ 8 січня 1935 року в старій хаті над річкою Удай, що у селі Біївці на Лубенщині Полтавської області. Зараз в цьому будинку розташований сільський музей Симоненка." },
         { id: 5, img: "nestayko.jpg", text: "Всеволод Зіновійович Нестайко народився 30 січня 1930 року у місті Бердичів Житомирської області, що входило, на той час, до складу Української СРР СРСР в сім'ї службовця та вчительки." },
     ]
-    author = authors.filter(author => {
+    var author = authors.filter(author => {
         return author.id === id;
     })
     document.getElementById('author_info').innerHTML = `<div class="p_athor_info"><p>${author[0].text}</p></div>
